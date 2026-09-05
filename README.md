@@ -136,7 +136,7 @@ Model performance (precision, recall, accuracy, confusion matrix), feature coeff
 
 ![Churn Model](images/Churn_prediction.png)
 
-*(Place your exported screenshots in an `images/` folder alongside this README, named as above — or update the paths to match your filenames.)*
+
 
 ---
 
@@ -199,6 +199,8 @@ Both issues were caught by going back and re-verifying results rather than accep
 
 ## Contact
 
-*(Name     - Hera Aleem 
+  Name     - Hera Aleem 
+
   Linkedin - www.linkedin.com/in/hera-aleem-1b7026379
-  Mail     - hera.aleem@gmail.com)*
+  
+  Mail     - hera.aleem@gmail.com
