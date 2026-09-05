@@ -11,10 +11,10 @@ An analytics project that segments customers by value, flags churn risk, and put
 ## Highlights
 
 - Analyzed **~800,000 transaction records** spanning **2 years** to segment the customer base by value and behavior. The top 10% of customers generate **~64% of total revenue**, which shows exactly where retention spend has the highest return.
-- Measured revenue at risk from disengaging customers two separate ways, a rule-based segmentation and a predictive model, and the two independently landed in the same range: **~£524,956 to £860,163**. Having both methods agree makes the number easier to trust and act on.
+- Measured revenue at risk from disengaging customers two separate ways, a rule-based segmentation and a predictive model, and the two independently landed in the same range: **~£524,956 to £860,163**. 
 - **444 customers** currently sit in the At-Risk / Needs-Win-Back segments, together holding **~£860,163 in revenue, or 5.3% of total revenue**. That is the ceiling on what focused retention outreach to this group could protect.
 - Built a **logistic regression churn model** on 2,410 active customers, covering feature engineering, threshold selection, and coefficient interpretation, and reached **76% accuracy** with **82% precision** in flagging churners. Recency (how long since a customer's last purchase) came out as the strongest predictor by a clear margin.
-- Flagged **910 customers** whose most recent purchase gap has more than doubled versus their own historical average. This is a behavior-triggered list, not a generic "hasn't bought in a while" export, so it's ready to hand to a retention team as-is.
+- Flagged **910 customers** whose most recent purchase gap has more than doubled versus their own historical average. 
 - Found that the **UK carries a higher at-risk revenue share (5.7%) than International (3.2%)**, despite being the larger, more established market. That runs counter to the usual assumption that overseas customers are the bigger churn risk, and it changes where retention focus should actually go.
 - Caught a **label-leakage flaw** in the churn model before it shipped: the target variable had been built in a way that let the model see part of the answer in advance, which would have produced an accuracy score that looked good but meant nothing in practice.
 
@@ -84,21 +84,21 @@ This project addresses that gap by:
 **1. A small group of customers drives most of the revenue.**
 The top-performing customer segment (High Value) accounts for roughly 70% of total revenue, with the next tier (Loyal customers) adding another 15%. Everything else contributes only a small share. Looked at another way, the top 10% of customers by spend generate nearly two-thirds of all revenue. This pattern holds true internationally as well, not just in the UK.
 
-*What this means: retention efforts should focus mainly on this small, high-value group — keeping one of these customers is worth far more than keeping several low-spending ones.*
+*Action to take: retention efforts should focus mainly on this small, high-value group — keeping one of these customers is worth far more than keeping several low-spending ones.*
 
 **2. A meaningful share of revenue is at risk of being lost.**
 Using two different approaches gave consistent results: customers flagged as at-risk by their purchase behavior account for about £860,163 in revenue, while a predictive model estimates the figure at around £524,956 once individual churn likelihood is factored in. Separately, 910 customers have started buying noticeably less often than their usual pattern — this group is the clearest, most immediate list for follow-up.
 
 One finding stood out: the UK, despite being the larger and more established market, has a *higher* share of at-risk revenue than international customers (5.7% vs 3.2%). The assumption that overseas customers are the bigger churn risk doesn't hold here.
 
-*What this means: outreach shouldn't be limited to international markets — UK customers need equal attention.*
+*Action to take: outreach shouldn't be limited to international markets — UK customers need equal attention.*
 
 **3. The biggest warning sign is how recently someone last purchased — not how often or how much.**
 Among the three factors studied, how recently a customer last bought something was by far the strongest predictor of churn. Total spend was the second most important factor, and it works in the opposite direction — higher spenders are less likely to leave. How frequently someone buys mattered the least.
 
 Separately, looking at the earliest customer cohort (the only one with a full 12-month window of data), retention doesn't decline to zero over time — it drops sharply in the first month, then settles into a steady range and holds there. This suggests a stable base of repeat customers rather than one-time buyers.
 
-*What this means: campaigns aimed at winning back customers should be triggered by how long it's been since their last purchase, not by how often they've historically shopped.*
+*Action to take: campaigns aimed at winning back customers should be influenced by how long it's been since their last purchase, not by how often they've historically shopped.*
 
 **4. Recommendations**
 - Prioritize retention spend on the top-value customer segment first.
@@ -156,7 +156,7 @@ Model performance (precision, recall, accuracy, confusion matrix), feature coeff
 
 ## Challenges & Fixes
 
-Every analytics project runs into problems along the way — documenting them is part of showing the work, not just the result.
+Every analytics project runs into problems along the way .Here are some challenges I came across-
 
 - **Recency-leakage in churn labeling.** In an early version, customers whose recency was already above the churn threshold at the cutoff date were automatically labeled as churned, regardless of what they actually did afterward. This meant the label was partly determined by the same variable being used to predict it, which would have inflated the model's apparent accuracy without it being real. The fix was to restrict the modeling population to customers who were still active at the cutoff, so the churn label reflected a genuine, testable outcome instead.
 
@@ -199,4 +199,6 @@ Both issues were caught by going back and re-verifying results rather than accep
 
 ## Contact
 
-*(Add your name, LinkedIn, and/or email here.)*
+*(Name     - Hera Aleem 
+  Linkedin - www.linkedin.com/in/hera-aleem-1b7026379
+  Mail     - hera.aleem@gmail.com)*
