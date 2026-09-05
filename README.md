@@ -114,27 +114,27 @@ Separately, looking at the earliest customer cohort (the only one with a full 12
 **1. Overview**
 Top-level KPIs (churn rate, total revenue, revenue-at-risk from both methods, total customers) alongside revenue-by-segment and churn distribution.
 
-![Overview](images/overview.png)
+![Overview](images/Overview.png)
 
 **2. Segmentation**
 Customer count and revenue by segment, plus an RFM bubble chart showing recency, frequency, and monetary value together.
 
-![Segmentation](images/segmentation.png)
+![Segmentation](images/Segmentation.png)
 
 **3. Retention & Purchase Behaviour**
 Cohort retention matrix by month, alongside the widened-purchase-gap customer list.
 
-![Retention](images/retention.png)
+![Retention](images/Retention.png)
 
 **4. Regional Insights**
 At-risk percentage and average order value compared across UK and International markets.
 
-![Regional Insights](images/regional.png)
+![Regional Insights](images/Regional.png)
 
 **5. Churn Prediction Model**
 Model performance (precision, recall, accuracy, confusion matrix), feature coefficients, and the top 10 highest-revenue-at-risk customers.
 
-![Churn Model](images/churn_model.png)
+![Churn Model](images/Churn_prediction.png)
 
 *(Place your exported screenshots in an `images/` folder alongside this README, named as above — or update the paths to match your filenames.)*
 
